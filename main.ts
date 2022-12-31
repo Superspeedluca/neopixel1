@@ -1,16 +1,25 @@
 input.onButtonPressed(Button.A, function () {
-    strip.setBrightness(100)
     for (let index = 0; index <= 7; index++) {
-        strip.setPixelColor(index, neopixel.colors(NeoPixelColors.Red))
+        lampjes.setPixelColor(index, neopixel.colors(NeoPixelColors.Red))
         // Pas bij dit blok worden de hiervoor ingestelde aanpassingen getoond.
-        strip.show()
+        lampjes.show()
         basic.pause(100)
     }
-    strip.clear()
-    strip.show()
+    lampjes.clear()
+    lampjes.show()
 })
-let strip: neopixel.Strip = null
-strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
-basic.forever(function () {
+input.onButtonPressed(Button.B, function () {
 	
+})
+input.onSound(DetectedSound.Loud, function () {
+	
+})
+let lampjes: neopixel.Strip = null
+lampjes = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
+let spel_loopt = true
+lampjes.setBrightness(100)
+basic.forever(function () {
+    while (spel_loopt) {
+    	
+    }
 })
